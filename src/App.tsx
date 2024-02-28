@@ -1,3 +1,19 @@
-export default function App(): JSX.Element {
-  return <button className='bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3'>...</button>;
-}
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { Providers } from '@/redux/provider';
+import { Button } from '@/components/ui/button';
+import './index.css';
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <Providers>
+      <div className='flex gap-x-5'>
+        <Button>Button</Button>
+        <Button variant='secondary'>Secondary</Button>
+        <Button variant='destructive'>Destructive</Button>
+        <Button variant='outline'>Outline</Button>
+        <Button variant='ghost'>Ghost</Button>
+      </div>
+    </Providers>
+  </React.StrictMode>,
+);

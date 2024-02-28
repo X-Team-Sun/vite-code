@@ -10,8 +10,10 @@ export default defineConfig(({ mode }) => {
     server: {
       port: parseInt(env.VITE_PORT),
     },
-    alias: {
-      '@': path.resolve(__dirname, './src'),
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './src'),
+      },
     },
   };
 });
